@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+
+<div class="row">
+    <h1>Villagers</h1>
+    <ul>
+        {% for villager in villagers %}
+            <li><a href="{% url 'people:villager_detail' villager.pk %}">{{villager.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
